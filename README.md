@@ -16,12 +16,12 @@ Initially, development is being done with the following technologies:
   - Existing Wired Home Alarm Sensors
   - WinBook TW700 (as a simple home console running a web UI)
   - Samsung Galaxy Note 2 (initial target mobile app UI)
-  - SparqEE Raspberry Pi Shield (future)
+  - SparqEE Raspberry Pi Shield or Adafruit FONA (future)
 - Software
   - Raspbian OS
   - node.js for core functionality - lightweight, designed for asynchronous tasks
   - Twitter Bootstrap for UI (subject to change)
-  - redis
+  - redis for persistent and transient storage
 - Services
   - Amazon AWS for cloud-based hosting of server (optional - can be hosted at home)
   - Twilio for text/voice-messaging (optional)
@@ -43,13 +43,14 @@ This is an admittedly far-reaching project.  The intention is to first create th
   - Web Console
 
 - v2.0 Goals
-  - Interfacing with wireless sensors.
+  - Interfacing with Z-Wave wireless sensors (Lowe's Iris, et al.)
   - Initial Home Automation functionality
     - Lighting control & scheduling
   - Initial Home Audio System functionality
 	- Ability to connect to speakers and play music to those speakers from home console or mobile application.
 	- Ability to connect BlueTooth audio player and play music to speakers. 
-
+  - Cellular Connectivity (SparqEE or FONA) 
+  
 - Possible Future Release Goals
   - iOS Mobile Application
   - Home Theater Control
@@ -68,7 +69,7 @@ SHARP is a network-oriented architecture which is designed for multiple layers o
 
 ####Classes of Elements
 - _SharpServer_ - SharpServer is the central "brain" of SHARP.  It consists of a message queue system with multiple queues, plugins for processing messages from the other elements, and a web-based UI for configuration and administration of the SHARP system.  The SharpServer may be hosted on-premise if you have a reliable network connection, static IP address (or dynamic DNS) and are allowed to run simple HTTP-based services, or may be hosted in an off-premise hosting environment (recommended).  
-- _SharpStation_ - SharpStations are the interfaces between the SharpServer, and the variety of sensors and devices that the SHARP project will support.  The current design for the SharpStation is Raspberry Pi-based, but could be expanded to other devices (such as BeagleBone, Arduino, Spark Core, etc) in the future (if you're interested in helping, e-mail jferg@thedotin.net).
+- _SharpStation_ - SharpStations are the interfaces between the SharpServer and the variety of sensors and devices that the SHARP project will support.  The current design for the SharpStation is Raspberry Pi-based, but could be expanded to other devices (such as BeagleBone, Arduino, Spark Core, etc) in the future (if you're interested in helping, e-mail jferg@thedotin.net).
 - _SharpUI_ - SharpUI is the interface between the user and the SharpServer.  SharpUI will initially be a web-based UI which can be run in a browser, or in a full-screen kiosk mode on a touch-screen device.  Administrative UI will be segregated from end-user UI.  
 
 ####Connectivity
