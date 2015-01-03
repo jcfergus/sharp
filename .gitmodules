@@ -1,0 +1,12 @@
+[submodule "sharpserver"]
+	path = sharpserver
+	url = https://github.com/jcfergus/sharpserver
+[submodule "sharpui-web"]
+	path = sharpui-web
+	url = https://github.com/jcfergus/sharpui-web
+[submodule "sharpstation"]
+	path = sharpstation
+	url = https://github.com/jcfergus/sharpstation
+[submodule "sharpui-android"]
+	path = sharpui-android
+	url = https://github.com/jcfergus/sharpui-android
